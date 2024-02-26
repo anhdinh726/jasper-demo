@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="SampleReportTemplate" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+    <parameter name="itemName" class="java.lang.String"/>
+    <parameter name="price" class="java.lang.Integer"/>
+    <title>
+        <band height="50">
+            <staticText>
+                <reportElement x="0" y="0" width="100" height="20"/>
+                <text><![CDATA[Item Name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="100" y="0" width="100" height="20"/>
+                <text><![CDATA[Price]]></text>
+            </staticText>
+        </band>
+    </title>
+    <detail>
+        <band height="50">
+            <textField>
+                <reportElement x="0" y="0" width="100" height="20"/>
+                <textFieldExpression><![CDATA[$P{itemName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="100" y="0" width="100" height="20"/>
+                <textFieldExpression><![CDATA[$P{price}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>
